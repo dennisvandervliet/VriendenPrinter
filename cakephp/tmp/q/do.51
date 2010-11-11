@@ -1,0 +1,5 @@
+wget --directory-prefix=/home/fb/cakephp/tmp/q_files/51/originals/ --input-file=/home/fb/cakephp/tmp/q_files/51/photo.list
+wget --spider http://www.manjano.nl/posters/confirm/51/c35be68c4b2ad3ed398417f8f391b303/10
+convert -limit memory 32mb -limit map 64mb -limit area 16mb /home/fb/cakephp/tmp/q_files/51/originals/*.* -resize x297 -quality 100  -resize '297<' -quality 100  -gravity center -crop 297x297+0+0 -quality 100  +repage /home/fb/cakephp/tmp/q_files/51/thumbnails/big/297-poster-51%d.thumb
+montage -limit memory 32 -limit map 64 -limit area 16  -quality 100 /home/fb/cakephp/tmp/q_files/51/thumbnails/big/*.* -tile 11x20 -geometry 297x297+2+2 /home/fb/cakephp/tmp/q_files/51/297-11-20-poster-51-vertical.jpg
+wget --spider http://www.manjano.nl/posters/confirm/51/c35be68c4b2ad3ed398417f8f391b303/20

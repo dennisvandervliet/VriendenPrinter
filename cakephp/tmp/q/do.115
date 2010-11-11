@@ -1,0 +1,4 @@
+wget -b -q --directory-prefix=/home/fb/cakephp/tmp/q_files/115/originals/ --input-file=/home/fb/cakephp/tmp/q_files/115/photo.list > /dev/null
+convert -limit memory 32mb -limit map 64mb -limit area 16mb /home/fb/cakephp/tmp/q_files/115/originals/*.* -resize x28 -quality 100  -resize '28<' -quality 100  -gravity center -crop 28x28+0+0 -quality 100  +repage /home/fb/cakephp/tmp/q_files/115/thumbnails/28-poster-115%d.thumb
+montage -limit memory 32 -limit map 64 -limit area 16  -quality 100 /home/fb/cakephp/tmp/q_files/115/thumbnails/*.* -tile 11x20 -geometry 28x28+1+1 /home/fb/cakephp/tmp/q_files/115/examples/28-11-20-poster-115-vertical.jpg
+montage -limit memory 32 -limit map 64 -limit area 16  -quality 100 /home/fb/cakephp/tmp/q_files/115/thumbnails/*.* -tile 20x11 -geometry 26x26+1+1 /home/fb/cakephp/tmp/q_files/115/examples/26-20-11-poster-115-horizontal.jpg
